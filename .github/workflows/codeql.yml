@@ -91,18 +91,3 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
-        
-    - name: List contents of directory
-      run: ls -la /home/runner/work/codeql-modifications/results/
-
-    - name: Upload SARIF file
-      uses: github/codeql-action/upload-sarif@v3
-      with:
-        # Path to SARIF file relative to the root of the repository
-        # sarif_file: results.sarif
-        # Optional category for the results
-        # Used to differentiate multiple results for one commit
-        # name: codeql-results
-        sarif_file: /home/runner/work/codeql-modifications/results/python.sarif
-        category: my-python-analysis
-        # 
