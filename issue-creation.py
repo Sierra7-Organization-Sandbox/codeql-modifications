@@ -5,7 +5,7 @@ import requests
 
 # Store as environment variable for future Repo>Settings>Secrets & Variables>Actions>Repository Secret
 auth_key = os.environ.get('API_SECRET')
-# auth_key = 'github_pat_faketogetALERT15613215646546511'
+# auth_key = 'github_pat_'
 
 # Get all repos in organization
 url = 'https://api.github.com/repos/Sierra7-Organization-Sandbox/codeql-modifications/code-scanning/alerts'
@@ -72,7 +72,7 @@ for alert in response.json():
     issue_titles = issue_exists()
 
     # This will need to be more sophisticated in the future (closed, open, file, etc.)
-    if formatted_title in issue_titles:
+    if formatted_title not in issue_titles:
         # Make the request to create an issue
         create_issue_response = requests.post(create_issue_url, headers=headers, json=issue_data)
 
