@@ -8,14 +8,15 @@
 # We have attempted to detect the languages in your repository. Please check
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
+# Try some changes...
 #
 name: "CodeQL"
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main", "codeql-test" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "codeql-test" ]
   schedule:
     - cron: '24 13 * * 1'
 
