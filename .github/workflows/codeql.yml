@@ -102,6 +102,7 @@ jobs:
         # sarif_file: results.sarif
         # Optional category for the results
         # Used to differentiate multiple results for one commit
-        name: codeql-results
-        category: my-analysis-tool
+        # name: codeql-results
+        sarif_file: /home/runner/work/codeql-modifications/results/python.sarif
+        category: my-python-analysis
         # 
