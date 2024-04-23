@@ -91,6 +91,9 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+        
+    - name: List contents of directory
+      run: ls -la /home/runner/work/_temp/codeql_databases/python/results/codeql/python-queries/
 
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
