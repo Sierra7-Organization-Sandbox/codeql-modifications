@@ -43,3 +43,5 @@ if __name__ == "__main__":
     # result = add(3, 5)
     # print(result)
     print('No problems here')
+    password = '12bucklemyShoe34!!'
+    print(f'password security alert incoming: {password}')
