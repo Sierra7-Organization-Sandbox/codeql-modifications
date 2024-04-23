@@ -5,7 +5,7 @@ import requests
 
 # Store as environment variable for future Repo>Settings>Secrets & Variables>Actions>Repository Secret
 auth_key = os.environ.get('API_SECRET')
-# auth_key = 'github_pat_'
+
 
 # Get all repos in organization
 url = 'https://api.github.com/repos/Sierra7-Organization-Sandbox/codeql-modifications/code-scanning/alerts'
