@@ -93,13 +93,10 @@ jobs:
         category: "/language:${{matrix.language}}"
         
     - name: List contents of directory
-      run: ls -la /home/runner/work/_temp/codeql_databases/python/results/codeql/python-queries/
+      run: ls -la /home/runner/work/_temp/codeql_databases/python/results/
 
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v3
       with:
-        # Path to SARIF file relative to the root of the repository
-        sarif_file: results.sarif
-        # Optional category for the results
-        # Used to differentiate multiple results for one commit
-        category: "/language:${{matrix.language}}"
+        name: codeql-results
+        path: /home/runner/work/codeql-modifications/results/python.sarif
