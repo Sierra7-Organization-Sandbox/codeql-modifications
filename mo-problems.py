@@ -16,6 +16,7 @@ def main():
 def send_request():
     username = "admin"
     password = "P@ssw0rd"
+    print(password)
     url = "https://example.com/login"
 
     response = requests.post(url, data={'username': username, 'password': password})
