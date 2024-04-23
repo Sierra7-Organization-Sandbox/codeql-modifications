@@ -91,3 +91,14 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
+
+    - name: Analyze with CodeQL
+      uses: github/codeql-action/analyze@v3
+      with:
+        sarif_file: codeql-results.sarif
+
+    - name: Upload SARIF results
+      uses: actions/upload-artifact@v2
+      with:
+        name: codeql-results
+        path: codeql-results.sarif
